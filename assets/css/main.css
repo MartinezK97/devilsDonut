@@ -168,20 +168,26 @@ h6 {
 .content-description {
     width: 100vw;
     max-width: 100vw;
-    min-width: 100vw;
+    /* min-width: 100vw; */
     height: 100vh;
     min-height: 100vh;
     max-height: 100vh;
     background-size: cover;
     background-attachment: fixed;
     z-index: -1;
+    box-shadow: 0 0 15px #0001;
 }
 
 .content-description .bg {
     height: calc(10rem + 25vh);
-    background-image: url(../img/bg.PNG);
+    background-image: url(../img/bg.png);
     background-attachment: fixed;
     padding-top: 2rem;
+}
+
+.clamp {
+    width: clamp(300px, 100vw, 900px);
+    margin: 0 auto;
 }
 
 .content-description .bg {
@@ -241,6 +247,14 @@ h6 {
     background-image: url(../img/footer.webp);
     background-size: cover;
     background-attachment: fixed;
+    position: relative;
+}
+
+section#contactos:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #0009;
 }
 
 .footer .contactos {
@@ -248,7 +262,7 @@ h6 {
     background-color: #0005;
     backdrop-filter: blur(20px);
     border-radius: 10px;
-    box-shadow: 0 0 10px #0004;
+    box-shadow: 0 0 10px #fff3;
 }
 
 .footer .contactos p {
@@ -274,7 +288,7 @@ h6 {
     text-align: center;
     border-radius: 10px;
     font-weight: 600;
-    box-shadow: 0 0 10px #0004;
+    box-shadow: 0 0 10px #fff3;
     margin: 1rem auto;
 }
 
@@ -293,7 +307,7 @@ h6 {
     background-color: #0005;
     backdrop-filter: blur(20px);
     border-radius: 10px;
-    box-shadow: 0 0 10px #0004;
+    box-shadow: 0 0 10px #fff3;
 }
 
 .rrss p {
@@ -318,4 +332,29 @@ h6 {
 .rrss div a i {
     font-size: 2rem;
     color: #fff3e3;
+}
+
+@media(width > 900px) {
+    .footer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: min-content;
+        grid-gap: 1rem;
+    }
+
+    .location {
+        grid-column: 1/2;
+        grid-row: 1/3;
+        margin: 1rem 0 auto auto;
+    }
+
+    .contactos {
+        margin-top: 1rem;
+    }
+
+    .contactos,
+    .rrss {
+        max-height: min-content;
+        max-width: 350px;
+    }
 }
