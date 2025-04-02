@@ -87,6 +87,7 @@ h6 {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 999;
 }
 
 
@@ -246,6 +247,9 @@ h6 {
     background-size: cover;
     background-attachment: fixed;
     position: relative;
+    overflow-y: scroll;
+    min-height: max-content;
+    padding-bottom: 1rem;
 }
 
 section#contactos:before {
@@ -330,6 +334,14 @@ section#contactos:before {
 .rrss div a i {
     font-size: 2rem;
     color: #fff3e3;
+}
+
+@media(width < 500px) {
+
+    .product img {
+        width: 200px;
+        height: 200px;
+    }
 }
 
 @media(width > 900px) {
