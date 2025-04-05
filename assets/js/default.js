@@ -25,7 +25,7 @@ $(document).ready(function () {
             var scrollTop = scrollV.scrollTop;
             var scrollPercent = (scrollTop / maxScrollVertical) * 100; // Porcentaje de desplazamiento
             console.log("Scroll vertical en %", scrollPercent);
-            calcScrollH = (scrollPercent * maxScrollHorizontal) / 100; // Calcular el desplazamiento horizontal correspondiente
+            calcScrollH = ((scrollPercent * maxScrollHorizontal) / 100) + 7; // Calcular el desplazamiento horizontal correspondiente
             scrollH.scrollLeft = calcScrollH; // Aplicar el desplazamiento horizontal
 
 

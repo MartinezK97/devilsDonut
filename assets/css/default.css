@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+html body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    min-width: 280px;
+    min-height: 300px;
+    background-color: #fffbee;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "Sour Gummy", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #5b3813;
+
+}
+
+.header {
+    background: #0003;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 10px -4px #0007;
+    width: 100vw;
+    height: 5rem;
+    display: grid;
+    align-content: center;
+    padding: 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+
+
+.header .home img {
+    width: 3rem;
+    height: 3rem;
+}
+
+.header .brand-name {
+    color: #ffc90e;
+}
+
+.header .home {
+    display: grid;
+    /* border: solid 1px; */
+    grid-template-columns: min-content auto;
+    grid-gap: 1rem;
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #fff;
+    align-items: center;
+}
+
+.header .logo img {
+    width: 3rem;
+    height: 3rem;
+}
+
+.btn-primary {
+    display: block;
+    margin-top: 1rem;
+    background: #ffc90e;
+    color: #5b3813;
+    padding: 0.5rem 2rem;
+    max-width: max-content;
+    border-radius: 50px;
+    border: solid 1px;
+    margin: 2rem 0 auto auto;
+}
+
+.footer {
+    padding: 6rem 2rem 0 2rem;
+    background-image: url(../img/footer.webp);
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    overflow-y: scroll;
+    min-height: max-content;
+    padding-bottom: 1rem;
+}
+
+section#contactos:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #0009;
+}
+
+.contactos {
+    padding: 1rem;
+    background-color: #0005;
+    backdrop-filter: blur(20px);
+    border-radius: 10px;
+    box-shadow: 0 0 10px #fff3;
+}
+
+.footer .contactos p {
+    color: #fff3e3;
+}
+
+.footer .contactos a {
+    font-size: 1.25rem;
+    color: #fff3e3;
+    font-weight: 600;
+}
+
+.footer .contactos .title {
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: #fff3e3;
+}
+
+.location {
+    background-color: #0005;
+    backdrop-filter: blur(20px);
+    text-align: center;
+    border-radius: 10px;
+    font-weight: 600;
+    box-shadow: 0 0 10px #fff3;
+    margin: 1rem auto;
+}
+
+.location iframe {
+    width: 100%;
+    height: 40vh;
+}
+
+.location p {
+    padding: 0.5rem 0;
+    margin: 0 auto;
+    color: #fff3e3;
+}
+
+.rrss {
+    background-color: #0005;
+    backdrop-filter: blur(20px);
+    border-radius: 10px;
+    box-shadow: 0 0 10px #fff3;
+}
+
+.rrss p {
+    text-align: center;
+    padding: 0.5rem 0;
+    margin: 0 auto;
+    color: #fff3e3;
+    font-weight: 600;
+}
+
+.rrss div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    text-align: center;
+    grid-gap: 1rem;
+    max-width: max-content;
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+
+.rrss div a i {
+    font-size: 2rem;
+    color: #fff3e3;
+}
