@@ -1,5 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
 
+:root {
+    --vh: 1vh;
+    /* Fallback para navegadores que no soporten custom properties */
+}
+
+#content,
+#slider {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    height: calc(var(--vh, 1vh) * 100);
+    /* Usamos el alto calculado */
+}
+
+/* Añadir padding para evitar notch */
+body {
+    padding:
+        env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
+
 html body {
     margin: 0;
     padding: 0;
