@@ -114,12 +114,15 @@ section#contactos:before {
 
 .footer .contactos p {
     color: #fff3e3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 .footer .contactos a {
     font-size: 1.25rem;
     color: #fff3e3;
     font-weight: 600;
+    min-width: max-content;
 }
 
 .footer .contactos .title {
@@ -136,7 +139,7 @@ section#contactos:before {
     border-radius: 10px;
     font-weight: 600;
     box-shadow: 0 0 10px #fff3;
-    margin: 1rem auto;
+    margin: 0.5rem auto;
 }
 
 .location iframe {
@@ -179,4 +182,21 @@ section#contactos:before {
 .rrss div a i {
     font-size: 2rem;
     color: #fff3e3;
+}
+
+.footer_footer {
+    background: #0009;
+    color: #939393;
+    font-size: 0.75rem;
+    position: absolute;
+    bottom: 0;
+    padding: 0.25rem;
+    text-align: center;
+    backdrop-filter: blur(10px);
+
+}
+
+.footer_footer a {
+    color: #fff;
+    text-decoration: none;
 }
