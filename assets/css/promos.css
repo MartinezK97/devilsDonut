@@ -1,5 +1,6 @@
 :root {
     --primary: #039777;
+    --header-height: 5rem;
 }
 
 ::-webkit-scrollbar {
@@ -143,7 +144,7 @@
     grid-auto-rows: calc(100vh - 5rem);
     overflow-x: hidden;
     overflow-y: scroll;
-
+    height: calc(100vh - var(--header-height));
 }
 
 
