@@ -83,7 +83,8 @@ h6 {
     max-width: max-content;
     border-radius: 50px;
     border: solid 1px;
-    margin: 2rem 0 auto auto;
+    margin: 0 auto;
+    display: block;
 }
 
 .footer {
