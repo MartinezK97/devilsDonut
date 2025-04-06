@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
     const scrollV = document.querySelector("#content-all"); // Contenedor con scroll vertical
     const scrollH = document.querySelector(".scrollH"); // Contenedor con scroll horizontal
     const products = document.querySelectorAll(".product"); // Lista de productos
@@ -8,7 +9,7 @@ $(document).ready(function () {
         const countElems = products.length; // Cantidad de elementos
         const elemV = products[0].clientHeight; // Altura de un producto
         const elemH = document.querySelector(".product-content").clientWidth; // Ancho de un producto horizontal
-
+        const offsetDinamico = elemH * 0.025;
         console.log("Altura de cada producto:", elemV);
         console.log("Ancho de cada producto:", elemH);
 
@@ -25,14 +26,14 @@ $(document).ready(function () {
             var scrollTop = scrollV.scrollTop;
             var scrollPercent = (scrollTop / maxScrollVertical) * 100; // Porcentaje de desplazamiento
             console.log("Scroll vertical en %", scrollPercent);
-            calcScrollH = ((scrollPercent * maxScrollHorizontal) / 100) + 7; // Calcular el desplazamiento horizontal correspondiente
+            calcScrollH = ((scrollPercent * maxScrollHorizontal) / 100); // Calcular el desplazamiento horizontal correspondiente
             scrollH.scrollLeft = calcScrollH; // Aplicar el desplazamiento horizontal
 
 
-            const radioDona = elemH / 2.25;
+            const radioDona = elemH / 3;
             const circunferencia = 2 * Math.PI * radioDona;
             const gradosRotacion = (calcScrollH / circunferencia) * 360;
-            console.log(gradosRotacion);
+            console.log("Grados de rotacion: ", gradosRotacion);
             // Aplicar la rotación a todas las imágenes
             productImages.forEach(img => {
                 img.style.transform = `rotateZ(-${gradosRotacion}deg)`;
@@ -63,3 +64,5 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 500);
     }
 });
+
+

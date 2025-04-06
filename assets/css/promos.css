@@ -1,13 +1,3 @@
-:root {
-    --primary: #039777;
-    --header-height: 5rem;
-}
-
-::-webkit-scrollbar {
-    display: none;
-}
-
-
 #slider {
     position: fixed;
     width: clamp(120px, 50vh, 400px);
@@ -25,7 +15,7 @@
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
     scroll-snap-align: center;
-    /* animation: heart 6s ease-in-out infinite; */
+    animation: heart 8s ease-in-out infinite;
     filter: drop-shadow(0 0 10px #000);
     z-index: 10;
     margin: 2rem auto;
@@ -69,11 +59,12 @@
 
 }
 
+
 .bodyBG {
     position: fixed;
     inset: 0 0 auto 0;
     /* background-color: #333; */
-    height: calc(5rem + 30vh);
+    height: calc(var(--header-height) + 30vh);
     z-index: 0;
     display: flex;
     overflow-x: hidden;
@@ -81,15 +72,9 @@
     scroll-behavior: smooth;
     pointer-events: none;
     white-space: nowrap;
+    top: -1rem;
 }
 
-/* .bodyBG:after {
-    content: "";
-    position: fixed;
-    inset: auto 0 0 0;
-    height: 50vh;
-    backdrop-filter: blur(20px);
-} */
 
 
 .bodyBG article {
@@ -164,7 +149,7 @@
 }
 
 #content .description .title {
-    /* color: var(--primary); */
+    color: var(--titles-color);
     font-size: 2rem;
     font-weight: 700;
     text-shadow: 0 0 5px #fff, 0 0 10px #0005;
@@ -209,6 +194,8 @@
     box-shadow: 0 0 5px #0003;
     text-align: center;
     max-width: max-content;
+    color: var(--titles-color);
+    font-weight: 500;
 }
 
 .text {
@@ -222,7 +209,7 @@ p.precio {
 }
 
 .precio i {
-    color: #5b3813;
+    color: var(--titles-color);
     font-size: 5rem;
 }
 
@@ -307,13 +294,17 @@ p.precio {
 
 @media screen and (max-height: 610px) {
 
+    :root {
+        --header-height: 4rem;
+    }
+
     .header {
         height: 4rem;
     }
 
     #content {
-        inset: 4rem 0 0 0;
-        grid-auto-rows: calc(100vh - 4rem);
+        inset: var(--header-height) 0 0 0;
+        grid-auto-rows: calc(100vh - var(--header-height));
     }
 
     #slider {
@@ -360,15 +351,8 @@ p.precio {
 }
 
 @media screen and (max-height: 520px) {
-
-    .header {
-        height: 3rem;
-        background: red;
-    }
-
-    .header .home img {
-        width: 2rem;
-        height: 2rem;
+    :root {
+        --header-height: 3rem;
     }
 
     #slider {
@@ -376,15 +360,13 @@ p.precio {
     }
 
 
-    .bodyBG {
-        height: calc(3rem + 30vh);
-    }
 
 
-    #content {
+
+    /* #content {
         inset: 3rem 0 0 0;
         grid-auto-rows: calc(100vh - 3rem);
-    }
+    } */
 
     #content .description {
         max-width: 98vw;

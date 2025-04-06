@@ -75,13 +75,16 @@
 
 .content-products {
     position: fixed;
-    width: 100vw;
+    width: clamp(300px, 100vw, 900px);
     top: 11rem;
     left: 0;
+    right: 0;
     margin: 0 auto;
     /* border: solid 1px #000; */
-    /* pointer-events: none; */
-
+    /* box-shadow: inset 0 0 1px 1px red; */
+    scroll-snap-type: x;
+    pointer-events: none;
+    /* z-index: 2; */
 }
 
 .scrollH {
@@ -105,7 +108,7 @@
     height: 25vh;
     min-height: 120px;
     max-height: 300px;
-    /* border: solid 1px blue; */
+    /* box-shadow: inset 0 0 1px 1px blue; */
 }
 
 
@@ -121,9 +124,6 @@
     /* border: solid 1px green; */
 }
 
-.content {
-    border: soliod 1px #000;
-}
 
 .content-description {
     width: 100vw;
@@ -135,7 +135,6 @@
     background-size: cover;
     background-attachment: fixed;
     z-index: -1;
-    box-shadow: 0 0 15px #0001;
     overflow-y: scroll;
 }
 

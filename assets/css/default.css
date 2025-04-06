@@ -2,7 +2,13 @@
 
 :root {
     --vh: 1vh;
-    /* Fallback para navegadores que no soporten custom properties */
+    --primary: #ffc90e;
+    --header-height: 5rem;
+    --titles-color: #5b3813;
+    --body-background: #fffbee;
+    --h1-size: 3rem;
+    --h2-size: 2rem;
+    --h3-size: 1.5rem;
 }
 
 #content,
@@ -25,7 +31,7 @@ html body {
     width: 100vw;
     min-width: 200px;
     min-height: 300px;
-    background-color: #fffbee;
+    background-color: var(--body-background);
 }
 
 ::-webkit-scrollbar {
@@ -47,13 +53,13 @@ h3,
 h4,
 h5,
 h6 {
-    color: #5b3813;
+    color: var(--titles-color);
 
 }
 
 .header {
-    background: #0003;
-    backdrop-filter: blur(15px);
+    background: #3119003d;
+    backdrop-filter: blur(5px);
     box-shadow: 0 0 10px -4px #0007;
     width: 100vw;
     height: 5rem;
@@ -69,12 +75,12 @@ h6 {
 
 
 .header .home img {
-    width: 3rem;
-    height: 3rem;
+    width: calc(var(--header-height) - 1rem);
+    height: calc(var(--header-height)- 1rem);
 }
 
 .header .brand-name {
-    color: #ffc90e;
+    color: var(--primary);
 }
 
 .header .home {
@@ -96,18 +102,23 @@ h6 {
 .btn-primary {
     display: block;
     margin-top: 1rem;
-    background: #ffc90e;
-    color: #5b3813;
+    background: var(--primary);
+    color: var(--titles-color);
     padding: 0.5rem 2rem;
     max-width: max-content;
     border-radius: 50px;
     border: solid 1px;
     margin: 0 auto;
     display: block;
+    margin: auto 0 auto auto;
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
 
 .footer {
-    padding: 6rem 2rem 0 2rem;
+    padding: calc(var(--header-height) + 0.5rem) 2rem 0 2rem;
     background-image: url(../img/footer.webp);
     background-size: cover;
     background-attachment: fixed;
@@ -130,12 +141,28 @@ section#contactos:before {
     backdrop-filter: blur(20px);
     border-radius: 10px;
     box-shadow: 0 0 10px #fff3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem 0;
+    max-width: 300px;
+    margin: 0 auto;
 }
 
 .footer .contactos p {
     color: #fff3e3;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    margin: 0.25rem;
+
+}
+
+.footer .contactos a {
+    display: block;
+    text-align: center;
+
+}
+
+.footer .contactos p i {
+    font-size: 0.85rem;
+    align-self: center;
 }
 
 .footer .contactos a {
@@ -150,6 +177,7 @@ section#contactos:before {
     font-weight: 600;
     font-size: 1.25rem;
     color: #fff3e3;
+    grid-column: 1/3;
 }
 
 .location {
@@ -160,11 +188,13 @@ section#contactos:before {
     font-weight: 600;
     box-shadow: 0 0 10px #fff3;
     margin: 0.5rem auto;
+    max-width: 300px;
 }
 
 .location iframe {
     width: 100%;
-    height: 40vh;
+    height: 25vh;
+    margin: 0;
 }
 
 .location p {
@@ -178,6 +208,8 @@ section#contactos:before {
     backdrop-filter: blur(20px);
     border-radius: 10px;
     box-shadow: 0 0 10px #fff3;
+    max-width: 300px;
+    margin: 0 auto;
 }
 
 .rrss p {
@@ -193,7 +225,7 @@ section#contactos:before {
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
     text-align: center;
-    grid-gap: 1rem;
+    grid-gap: 2rem;
     max-width: max-content;
     margin: 0 auto;
     padding: 1rem 0;
@@ -213,7 +245,8 @@ section#contactos:before {
     padding: 0.25rem;
     text-align: center;
     backdrop-filter: blur(10px);
-
+    left: 0;
+    right: 0;
 }
 
 .footer_footer a {
