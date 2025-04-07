@@ -76,6 +76,7 @@ h6 {
     grid-template-columns: max-content auto;
     align-content: center;
     grid-gap: 1rem;
+    text-shadow: 0px 0px 6px #0008;
 }
 
 .header nav {
@@ -102,6 +103,7 @@ h6 {
 .header .home img {
     width: calc(var(--header-height) - 1rem);
     height: calc(var(--header-height)- 1rem);
+    filter: drop-shadow(0 0 10px #0008);
 }
 
 .header .brand-name {
