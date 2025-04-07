@@ -16,12 +16,13 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- JQuery -->
-    <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
+    <!-- Contenedor de los productos con posicion fija -->
     <section class="content-products">
+        <!-- Contenedor de imagenes con scroll horizontal -->
         <div class="scrollH clamp">
             <div class="product"></div>
             <div class="product">
@@ -48,9 +49,10 @@
             <div class="product">
                 <img src="./assets/img/donuts/devil8.webp" alt="Donas de ...">
             </div>
-
+            <div class="product">
+                <img src="./assets/img/donuts/devil8.webp" alt="Donas de ...">
+            </div>
             <div class="product"></div>
-
         </div>
     </section>
     <section id="content-all">
@@ -62,30 +64,72 @@
                 <div class="overlay"></div> <!-- Capa oscura para mejor visibilidad del texto -->
             </div>
             <div class="header">
-                <a href="#" class="home">
+                <a href="./" title="Ir al inicio" class="home">
                     <img src="./assets/img/brand/iso.svg" alt="Logo de Donas Diablo">
                     <span class="brand-name">Donas Diablo</span>
                 </a>
-
+                <nav class="dg gtc-6 gg-1-5 maxw-min mar-a-0-a-a ac-center ai-center">
+                    <a href="http://www.localhost/devilsDonut/" title="Ir al inicio" class="dg gtc-min-a gg-5">
+                        <i class="fa fa-home as-center"></i>
+                        <span> Inicio</span>
+                    </a>
+                    <a href="./promociones" title="Ir a la página de promociones" class="dg gtc-min-a gg-5">
+                        <i class="icon donut"></i>
+                        <span>Promociones</span>
+                    </a>
+                    <a href="./nosotros" title="Ir a sobre mi" class="dg gtc-min-a gg-5 minw-max">
+                        <i class="fa fa-user as-center"></i>
+                        <span>Nosotros</span>
+                    </a>
+                    <a href="#contactos" title="Ir a testimonios" class="dg gtc-min-a gg-5">
+                        <i class="fa fa-envelope as-center"></i>
+                        <span>Contactos</span>
+                    </a>
+                </nav>
             </div>
-            <h1>Donas Artesanales<br>Hechas con Ingredientes<br> 100% Naturales</h1>
+            <h1>
+                Cremosas. Tentadoras. IRRESISTIBLES.
+                <br>
+                EL antojo tiene nombre, y baña en chocolate.
+            </h1>
+            <a href="#scrollV" class="cta">Ver catálogo <i class="fa fa-arrow-down"></i></a>
         </setion>
+        <!--! Menu -->
+        <div id="menu" class="menu hide">
+            <button class="btn-menu fz-2 maxw-max"><i class="fa fa-bars"></i></button>
+            <a href="./" title="Ir al inicio"><i class="fa fa-home"></i> Inicio</a>
+            <a href="./promociones" title="Ir al inicio"><i class="icon donut"></i> Promociones</a>
+            <a href="./nosotros" title="Ir al inicio"><i class="fa fa-users"></i> Nosotros</a>
+            <a href="#contactos" title="Ir al inicio"><i class="fa fa-envelope"></i> Contactos</a>
+        </div>
+
 
         <div class="scrollV" id="scrollV">
             <section class="product-content">
                 <div class="content">
                     <div class="content-description clamp">
                         <article class="bg">
-                            <h1>Diablo 1</h1>
+                            <h1>COLOSO</h1>
                         </article>
                         <article class="description">
-                            <h2 class="min-desc">Donas galceadas + chocolate blanco</h2>
+                            <div class="category">Clásicas</div>
+                            <h2 class="min-desc">Galceado rosa</h2>
                             <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus aspernatur error ad
-                                natus neque assumenda, delectus impedit quo.
+                                Su glaseado rosa brilla como un antojo prohibido. Dulce, seductora… imposible darle solo
+                                una mordida.
                             </p>
-                            <a href="http://wa.me/+59898760446/" title="Solicitá las tuyas por whatsapp" target="_blank"
-                                rel="noopener noreferrer">Hacé tu pedido</a>
+                            <div class="gc2">
+
+                                <div class="price">
+                                    <i class="fa fa-certificate"></i>
+                                    <span class="num">$100</span>
+                                </div>
+                                <a class="btn-primary" href="http://wa.me/+59898760446/"
+                                    title="Solicitá las tuyas por whatsapp" target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-whatsapp"></i>
+                                    Hacé tu pedido
+                                </a>
+                            </div>
                         </article>
                     </div>
                 </div>
@@ -94,16 +138,22 @@
                 <div class="content">
                     <div class="content-description clamp">
                         <article class="bg">
-                            <h1>Diablo 2</h1>
+                            <h1>SUPERNOVA</h1>
                         </article>
                         <article class="description">
-                            <h2 class="min-desc">Chocolate clásico + chips de azucar<br></h2>
+                            <div class="category">Clásicas</div>
+                            <h2 class="min-desc">Baño de chocolate blanco<br></h2>
                             <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium eos quod ipsum
-                                tempore sunt ducimus fugiat quibusdam.
+                                Un baño de chocolate blanco que derrite sentidos. Suave, cremosa y adictivamente
+                                ricas.
                             </p>
-                            <a href="http://wa.me/+59898760446/" title="Solicitá las tuyas por whatsapp" target="_blank"
-                                rel="noopener noreferrer">Hacé tu pedido</a>
+                            <div class="price">
+                                <i class="fa fa-certificate"></i>
+                                <span class="num">$100</span>
+                            </div>
+                            <a class="btn-primary" href="http://wa.me/+59898760446/"
+                                title="Solicitá las tuyas por whatsapp" target="_blank" rel="noopener noreferrer"><i
+                                    class="fab fa-whatsapp"></i> Hacé tu pedido</a>
                         </article>
                     </div>
                 </div>
@@ -112,16 +162,22 @@
                 <div class="content">
                     <div class="content-description clamp">
                         <article class="bg">
-                            <h1>Diablo 3</h1>
+                            <h1>NEBULOSA</h1>
                         </article>
                         <article class="description">
-                            <h2 class="min-desc">Chocolare rocher + chocolate blanco</h2>
+                            <div class="category">Clásicas</div>
+                            <h2 class="min-desc">Glaseadas de azucar</h2>
                             <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores ad ipsum in, cumque
-                                vitae esse nisi magni reprehenderit abica.
+                                Brilla con cristales de azúcar que crujen al primer mordisco. Simplicidad pura, pero con
+                                un encanto que atrapa.
                             </p>
-                            <a href="http://wa.me/+59898760446/" title="Solicitá las tuyas por whatsapp" target="_blank"
-                                rel="noopener noreferrer">Hacé tu pedido</a>
+                            <div class="price">
+                                <i class="fa fa-certificate"></i>
+                                <span class="num">$100</span>
+                            </div>
+                            <a class="btn-primary" href="http://wa.me/+59898760446/"
+                                title="Solicitá las tuyas por whatsapp" target="_blank" rel="noopener noreferrer"><i
+                                    class="fab fa-whatsapp"></i> Hacé tu pedido</a>
                         </article>
                     </div>
                 </div>
@@ -130,16 +186,22 @@
                 <div class="content">
                     <div class="content-description clamp">
                         <article class="bg">
-                            <h1>Diablo 4</h1>
+                            <h1>LLUVIA ÁCIDA</h1>
                         </article>
                         <article class="description">
-                            <h2 class="min-desc">Chocolate amargo + chips de azúcar</h2>
+                            <div class="category">Clásicas</div>
+                            <h2 class="min-desc">Glaseadas de limón</h2>
                             <p>
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam corporis, at, dolorem,
-                                itaque illum voluptatum hic reiciendis.
+                                Para los amantes de los cítricos. Su glaseado de limón es una explosión de frrecura que
+                                deja ganas de más.
                             </p>
-                            <a href="http://wa.me/+59898760446/" title="Solicitá las tuyas por whatsapp" target="_blank"
-                                rel="noopener noreferrer">Hacé tu pedido</a>
+                            <div class="price">
+                                <i class="fa fa-certificate"></i>
+                                <span class="num">$100</span>
+                            </div>
+                            <a class="btn-primary" href="http://wa.me/+59898760446/"
+                                title="Solicitá las tuyas por whatsapp" target="_blank" rel="noopener noreferrer"><i
+                                    class="fab fa-whatsapp"></i> Hacé tu pedido</a>
                         </article>
                     </div>
                 </div>
@@ -148,16 +210,23 @@
                 <div class="content">
                     <div class="content-description clamp">
                         <article class="bg">
-                            <h1>Diablo 5</h1>
+                            <h1>MEDIANOCHE</h1>
                         </article>
                         <article class="description">
-                            <h2 class="min-desc">Chocolate Italiano + chips de nueces</h2>
+                            <div class="category">Clásicas</div>
+                            <h2 class="min-desc">Baño de chocolate negro</h2>
                             <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, veritatis blanditiis
-                                libero asperiores velit pariatur ullam.
+                                Un chocolate negro intenso que envuelve tu paladar. Perfecta para quienes buscan la
+                                dulzura en
+                                su forma más profunda y osada.
                             </p>
-                            <a href="http://wa.me/+59898760446/" title="Solicitá las tuyas por whatsapp" target="_blank"
-                                rel="noopener noreferrer">Hacé tu pedido</a>
+                            <div class="price">
+                                <i class="fa fa-certificate"></i>
+                                <span class="num">$100</span>
+                            </div>
+                            <a class="btn-primary" href="http://wa.me/+59898760446/"
+                                title="Solicitá las tuyas por whatsapp" target="_blank" rel="noopener noreferrer"><i
+                                    class="fab fa-whatsapp"></i> Hacé tu pedido</a>
                         </article>
                     </div>
                 </div>
@@ -166,16 +235,22 @@
                 <div class="content">
                     <div class="content-description clamp">
                         <article class="bg">
-                            <h1>Diablo 6</h1>
+                            <h1>COSMIC CRUNCH</h1>
                         </article>
                         <article class="description">
-                            <h2 class="min-desc">Chocolate blanco + maní laminado</h2>
+                            <div class="category">Especiales</div>
+                            <h2 class="min-desc">Chocolate nego + maní</h2>
                             <p>
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos repudiandae fugiat
-                                eius dicta veniam consectetur architecto.
+                                El chocolate negro se funde con el crujiente maní, creando una explosión de sabores
+                                y texturas en tu boca.
                             </p>
-                            <a href="http://wa.me/+59898760446/" title="Solicitá las tuyas por whatsapp" target="_blank"
-                                rel="noopener noreferrer">Hacé tu pedido</a>
+                            <div class="price">
+                                <i class="fa fa-certificate"></i>
+                                <span class="num">$120</span>
+                            </div>
+                            <a class="btn-primary" href="http://wa.me/+59898760446/"
+                                title="Solicitá las tuyas por whatsapp" target="_blank" rel="noopener noreferrer"><i
+                                    class="fab fa-whatsapp"></i> Hacé tu pedido</a>
                         </article>
                     </div>
                 </div>
@@ -184,16 +259,22 @@
                 <div class="content">
                     <div class="content-description clamp">
                         <article class="bg">
-                            <h1>Diablo 7</h1>
+                            <h1>VENOM</h1>
                         </article>
                         <article class="description">
-                            <h2 class="min-desc">Glaceadas + chips de chocolate blanco</h2>
+                            <div class="category">Especiales</div>
+                            <h2 class="min-desc">Chocolate blanco + Oreos</h2>
                             <p>
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi cumque nobis
-                                voluptatem consequatur, asperiores.
+                                Un baño de chocolate blanco, combinado con trozos de Oreo que estallan en cada
+                                bocado. Dulces, crujientes y muy adictivas.
                             </p>
-                            <a href="http://wa.me/+59898760446/" title="Solicitá las tuyas por whatsapp" target="_blank"
-                                rel="noopener noreferrer">Hacé tu pedido</a>
+                            <div class="price">
+                                <i class="fa fa-certificate"></i>
+                                <span class="num">$120</span>
+                            </div>
+                            <a class="btn-primary" href="http://wa.me/+59898760446/"
+                                title="Solicitá las tuyas por whatsapp" target="_blank" rel="noopener noreferrer"><i
+                                    class="fab fa-whatsapp"></i> Hacé tu pedido</a>
                         </article>
                     </div>
                 </div>
@@ -202,16 +283,45 @@
                 <div class="content">
                     <div class="content-description clamp">
                         <article class="bg">
-                            <h1>Diablo 8</h1>
+                            <h1>LENGUA DE DIABLO</h1>
                         </article>
                         <article class="description">
-                            <h2 class="min-desc">Baño de Nutella</h2>
+                            <div class="category">Especiales</div>
+                            <h2 class="min-desc">Chocolate blanco y negro + Frutos Rojos</h2>
                             <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis id beatae, earum
-                                laudantium et provident suscipit eum.
+                                La combinación perfecta de chocolates mas la frescura de los frutos rojos.!
                             </p>
-                            <a href="http://wa.me/+59898760446/" title="Solicitá las tuyas por whatsapp" target="_blank"
-                                rel="noopener noreferrer">Hacé tu pedido</a>
+                            <div class="price">
+                                <i class="fa fa-certificate"></i>
+                                <span class="num">$180</span>
+                            </div>
+                            <a class="btn-primary" href="http://wa.me/+59898760446/"
+                                title="Solicitá las tuyas por whatsapp" target="_blank" rel="noopener noreferrer"><i
+                                    class="fab fa-whatsapp"></i> Hacé tu pedido</a>
+                        </article>
+                    </div>
+                </div>
+            </section>
+            <section class="product-content">
+                <div class="content">
+                    <div class="content-description clamp">
+                        <article class="bg">
+                            <h1>VOLCÁNICA</h1>
+                        </article>
+                        <article class="description">
+                            <div class="category">Especiales</div>
+                            <h2 class="min-desc">Rellenas de Nutella</h2>
+                            <p>
+                                El chocolate negro intenso se funde con un corazón de Nutella, creando una erupción de
+                                sabor que explota en cada mordida.
+                            </p>
+                            <div class="price">
+                                <i class="fa fa-certificate"></i>
+                                <span class="num">$180</span>
+                            </div>
+                            <a class="btn-primary" href="http://wa.me/+59898760446/"
+                                title="Solicitá las tuyas por whatsapp" target="_blank" rel="noopener noreferrer"><i
+                                    class="fab fa-whatsapp"></i> Hacé tu pedido</a>
                         </article>
                     </div>
                 </div>
@@ -219,7 +329,7 @@
 
             <section class="product-content footer" id="contactos">
                 <div class="contactos">
-                    <p class="title"><i class="fa fa-comments"></i> Contactate con nosotros</p>
+                    <p class="title"><i class="fa fa-comments"></i> Contactanos</p>
                     <a href="tel:+59898760446"><i class="fa fa-phone"></i> 098 760 446</a>
                     <a href="tel:+59898760446"><i class="fa fa-phone"></i> 098 760 446</a>
 
@@ -227,7 +337,7 @@
                 <div class="location">
                     <p><i class="fa fa-location-dot"></i> ¿Donde estamos?</p>
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2752.002107188388!2d-56.169889861130095!3d-34.888866716513!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2suy!4v1743617295634!5m2!1ses-419!2suy"
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2752.002107188388!2d-56.169889861130095!3d-34.888866716513!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2suy!4v1743617295634!5m2!1ses-419!2suy&zoom=10"
                         width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
@@ -256,6 +366,7 @@
     </section>
 
     <script src="./assets/js/default.js"></script>
+    <script src="./assets/js/menu.js"></script>
 </body>
 
 </html>

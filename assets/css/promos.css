@@ -130,12 +130,13 @@
     overflow-x: hidden;
     overflow-y: scroll;
     height: calc(100vh - var(--header-height));
+    scroll-behavior: smooth;
 }
 
 
 
 #content .description {
-    border: solid 1px green;
+    /* border: solid 1px green; */
     scroll-snap-align: center;
     inset: 0;
     display: grid;
@@ -146,6 +147,7 @@
     height: 100%;
     padding: 0 1rem;
     align-content: flex-start;
+    align-content: center;
 }
 
 #content .description .title {
@@ -242,12 +244,30 @@ p.precio {
 
 .foot .contactos {
     margin-top: 1rem;
-    width: clamp(200px, 100%, 500px);
+    width: clamp(200px, 100%, 400px);
     margin: 0.5rem auto 0;
+    display: block;
+}
+
+.foot .contactos .tt {
+    grid-column: 1/3;
+    text-align: center;
+    font-weight: 600;
+    display: block;
 }
 
 .foot .contactos * {
     color: #fff;
+    text-align: center;
+}
+
+.foot .contactos i {
+    font-size: 0.85rem;
+}
+
+.foot .contactos p {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .rrss {

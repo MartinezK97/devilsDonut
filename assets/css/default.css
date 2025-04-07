@@ -2,10 +2,12 @@
 
 :root {
     --vh: 1vh;
-    --primary: #ffc90e;
+    --primary: rgb(255, 201, 14);
+    --secondary: #f0d1b0;
+    --terciary: #c3a98e;
     --header-height: 5rem;
     --titles-color: #5b3813;
-    --body-background: #fffbee;
+    --body-background: rgb(255, 251, 238);
     --h1-size: 3rem;
     --h2-size: 2rem;
     --h3-size: 1.5rem;
@@ -70,9 +72,32 @@ h6 {
     top: 0;
     left: 0;
     z-index: 999;
+    display: grid;
+    grid-template-columns: max-content auto;
+    align-content: center;
+    grid-gap: 1rem;
 }
 
+.header nav {
+    height: min-content;
+    align-self: center;
+    grid-gap: 2rem;
+    max-height: max-content;
+    margin: auto 0 auto auto;
+    display: grid;
+    grid-template-columns: repeat(4, max-content);
+}
 
+.color-primary {
+    color: var(--primary);
+}
+
+.header nav a {
+    color: #fff;
+    display: inline-block;
+    min-width: max-content;
+    font-size: 1.35rem;
+}
 
 .header .home img {
     width: calc(var(--header-height) - 1rem);
@@ -113,8 +138,69 @@ h6 {
     margin: auto 0 auto auto;
 }
 
-::-webkit-scrollbar {
-    display: none;
+#menu {
+    position: fixed;
+    z-index: 9999;
+    background-color: #5b381390;
+    top: 0;
+    right: 0;
+    width: 200px;
+    max-width: 90%;
+    display: grid;
+    grid-auto-rows: min-content;
+    bottom: 0;
+    grid-gap: 1rem;
+    color: #fff;
+    padding: 1rem;
+    backdrop-filter: blur(10px);
+    transition: 0.5s;
+}
+
+#menu .btn-menu {
+    position: absolute;
+    background: transparent;
+    font-size: 1.75rem;
+    color: #fff;
+    transform: translate(calc(-100% - 1rem), 1rem);
+    border: none;
+    text-shadow: 0 0 1px #0003;
+}
+
+#menu a {
+    color: #fff;
+    display: grid;
+    grid-template-columns: 1.25rem auto;
+    grid-gap: 0.5rem;
+    align-content: center;
+    align-items: center;
+    font-size: 1.35rem;
+
+}
+
+#menu a i {
+    font-size: 1rem;
+    align-self: center;
+}
+
+#menu.hide {
+    transform: translateX(100%);
+}
+
+i.icon {
+    width: 1.1rem;
+    height: 1.1rem;
+    display: inline-block;
+    background-size: cover;
+    background-position: 50%;
+    align-self: center;
+}
+
+.icon.donut {
+    background-image: url(../img/donut.svg);
+}
+
+.icon.offers {
+    background-image: url(../img/offers.svg);
 }
 
 .footer {
@@ -160,13 +246,13 @@ section#contactos:before {
 
 }
 
-.footer .contactos p i {
+.contactos i {
     font-size: 0.85rem;
     align-self: center;
 }
 
 .footer .contactos a {
-    font-size: 1.25rem;
+    font-size: 1rem;
     color: #fff3e3;
     font-weight: 600;
     min-width: max-content;
@@ -252,4 +338,25 @@ section#contactos:before {
 .footer_footer a {
     color: #fff;
     text-decoration: none;
+}
+
+
+@media(width < 900px) {
+    #menu {
+        display: grid;
+    }
+
+    .header nav {
+        display: none;
+    }
+}
+
+@media(width > 900px) {
+    #menu {
+        display: none;
+    }
+
+    .header nav {
+        display: grid;
+    }
 }
